@@ -1,0 +1,60 @@
+<!--
+  Program: Lab-1-Contact 
+  Programer: Adam LebBlanc
+  Date Updated: 2024-02-05
+  Version: 1.0
+-->
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script defer src="./Scripts/app.js"></script>
+      <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="./Style/style.css">
+      <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+      <link rel="stylesheet" href="./node_modules/font-awesome/css/font-awesome.min.css"/>
+      <title>Contact</title>
+  </head>
+  <h1></h1>
+  <body class="backGround">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="#">Adam LeBlanc</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./about.html">About</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="./contact.html">Contact</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="./product.html">Product</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="./services.html">Services</a>
+              </li>
+            </ul>
+          </div>
+        </nav> 
+    <form class="contactFrom" name="myForm" onsubmit="return contactLog(event)" method="post">
+      <label>First Name:</label>
+      <input type="text" name="fname" maxlength="30" autocomplete="off"/>
+      <label>Last Name:</label>
+      <input type="text" name="lname" maxlength="30" autocomplete="off"/>
+      <label>Email:</label>
+      <input type="email" name="email" maxlength="30" autocomplete="off"/>
+      <label for="shortMessage">Short Message:</label>
+      <input type="text" id="shortMessage" name="shortMessage" maxlength="160" autocomplete="off" required />
+      <input type="submit" value="Submit"/>
+    </form>
+    <nav class="navbar navbar-inverse navbar-fixed-bottom" id="bottomNav"></nav>
+  </body>
+  </html>

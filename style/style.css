@@ -1,0 +1,44 @@
+.backGround{
+    background-image: url('backGround.jpeg');
+    background-size: cover;
+}
+
+.indexHeading{
+    color: aliceblue;
+}
+
+.h1{
+    color: aliceblue;
+}
+
+#welcome{
+    color: aliceblue;
+    text-align: center;
+    border: 3px solid powderblue;
+}
+
+#bottomNav{
+    background-color: aliceblue;
+    border: 2px solid powderblue;
+
+}
+
+.productsP {
+    color: aliceblue; 
+  }
+
+.aboutMe{
+    color: aliceblue;
+}
+
+.services{
+    color: aliceblue;
+}
+
+.servicesHeading{
+    color: aliceblue;
+}
+
+.contactForm{
+    color: aliceblue;
+}
