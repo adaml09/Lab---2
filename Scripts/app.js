@@ -4,7 +4,7 @@
  * Date Updated: 2024-02-20
  * Version: 2.0
  */
-$(document).ready(function (){
+//$(document).ready(function (){
     console.log("Script is running");
 
     // adding text to the fixed bottom navbar
@@ -47,7 +47,7 @@ $(document).ready(function (){
 
     // Code to inject the text into the h1 tags of the corresponding HTML pages
     if(document.getElementsByClassName('indexHeading').length > 0){
-        headingIndex[0].innerHTML = "Lab 1 - Adam LeBlanc";
+        headingIndex[0].innerHTML = "Lab 2 - Adam LeBlanc";
     }
 
     // function to console log the contact info data
@@ -162,4 +162,4 @@ $(document).ready(function (){
     const contactNavItem = document.querySelector('.nav-item:last-child');
     contactNavItem.parentNode.insertBefore(newNavItem, contactNavItem);
 
-});
+//});
