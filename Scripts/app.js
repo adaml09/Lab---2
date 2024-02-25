@@ -4,6 +4,52 @@
  * Date Updated: 2024-02-20
  * Version: 2.0
  */
+
+class User {
+    constructor(firstName, lastName, email, password) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.password = password;
+    }
+
+    // Getter and setter methods for firstName
+    getFirstName() {
+        return this.firstName;
+    }
+
+    setFirstName(firstName) {
+        this.firstName = firstName;
+    }
+
+    // Getter and setter methods for lastName
+    getLastName() {
+        return this.lastName;
+    }
+
+    setLastName(lastName) {
+        this.lastName = lastName;
+    }
+
+    // Getter and setter methods for email
+    getEmail() {
+        return this.email;
+    }
+
+    setEmail(email) {
+        this.email = email;
+    }
+
+    // Getter and setter methods for password
+    getPassword() {
+        return this.password;
+    }
+
+    setPassword(password) {
+        this.password = password;
+    }
+}
+
 //$(document).ready(function (){
     console.log("Script is running");
 
@@ -14,7 +60,7 @@
     // creating heading for all pages
     var headingIndex = document.getElementsByTagName('h1');
     if (headingIndex.length > 0) {
-        headingIndex[0].innerHTML = "Lab 1 - Adam LeBlanc";
+        headingIndex[0].innerHTML = "Lab 2 - Adam LeBlanc";
     }
 
     // getting the element for the welcome message
@@ -108,30 +154,37 @@
             " It would get super competitive!";
         } 
     });
+    
+    document.addEventListener("DOMContentLoaded", function() {
+        var product = document.getElementById('product');
+        if(product){
+            // Function to add images to the productsP div
+            function addImages() {
+                // Get the productsP div
+                const productsDiv = document.getElementById('productsP');
   
-    // Function to add images to the productsP div
-    function addImages() {
-        // Get the productsP div
-        const productsDiv = document.getElementById('productsP');
+                // Create and add the first image
+                const image1 = document.createElement('img');
+                image1.src = './images/chiclets-logo.avif';
+                productsDiv.appendChild(image1);
   
-        // Create and add the first image
-        const image1 = document.createElement('img');
-        image1.src = './images/chiclets-logo.avif';
-        productsDiv.appendChild(image1);
+                // Create and add the second image
+                const image2 = document.createElement('img');
+                image2.src = './images/RDR2-logo.avif';
+                productsDiv.appendChild(image2);
   
-        // Create and add the second image
-        const image2 = document.createElement('img');
-        image2.src = './images/RDR2-logo.avif';
-        productsDiv.appendChild(image2);
-  
-        // Create and add the third image
-        const image3 = document.createElement('img');
-        image3.src = './images/top-gear-logo.jpg';
-        productsDiv.appendChild(image3);
-    }
-  
-    // Call the function to add the images when the page loads
-    window.onload = addImages;
+                // Create and add the third image
+                const image3 = document.createElement('img');
+                image3.src = './images/top-gear-logo.jpg';
+                productsDiv.appendChild(image3);
+            }
+        }
+        
+        // Call the function to add the images when the page loads
+        window.onload = addImages;
+    });
+
+    
 
     document.addEventListener('DOMContentLoaded', function() {
         document.querySelector('a[href="./product.html"]').textContent = 'Interests';
@@ -162,4 +215,30 @@
     const contactNavItem = document.querySelector('.nav-item:last-child');
     contactNavItem.parentNode.insertBefore(newNavItem, contactNavItem);
 
+    document.addEventListener("DOMContentLoaded", function() {
+        
+        document.getElementById('login_btn').addEventListener('click', function(event){
+            e.preventDefault(); // Prevent form submission
+            console.log("function reached");
+            // Get input values
+            var username = $('#exampleInputEmail1').val();
+            var password = $('#exampleInputPassword1').val();
+                
+            // Log values to console 
+            console.log('Username: ' + username);
+            console.log('Password: ' + password);
+        });
+        document.getElementById('register_btn').addEventListener('click', function(event){
+            e.preventDefault(); // Prevent form submission
+                
+            // Get input values
+            var username = $('#exampleInputEmail1').val();
+            var password = $('#exampleInputPassword1').val();
+                
+            // Log values to console 
+            console.log('Username: ' + username);
+            console.log('Password: ' + password);
+        });
+    }); 
+    
 //});
