@@ -1,5 +1,6 @@
 console.log("script ran");
 
+// gets the blog post html element for html insertion
 let blogPost = document.getElementById("blogInfo");
 
 
@@ -28,11 +29,16 @@ async function fetchData() {
         blogID = jsonData[i].id;
         blogTitle = jsonData[i].title;
         blogBody = jsonData[i].body;
-        
+
+        // insert the data into the html
+        blogPost.innerHTML = (`<h1>${blogTitle}</h1>
+        <h2>${blogUserID}</h2>
+        <h2>${blogID}</h2>
+        <p>${blogBody}</p>`);
 
         i++;
     }
 }
 
-// Call the async function
+// Calling the async function which holds the rest of the code
 fetchData();
