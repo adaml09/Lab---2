@@ -30,11 +30,14 @@ async function fetchData() {
         blogTitle = jsonData[i].title;
         blogBody = jsonData[i].body;
 
-        // insert the data into the html
-        blogPost.innerHTML = (`<h1>${blogTitle}</h1>
-        <h2>${blogUserID}</h2>
-        <h2>${blogID}</h2>
-        <p>${blogBody}</p>`);
+        // Get the existing content of the element
+        let existingContent = blogPost.innerHTML;
+
+        // Append the new content to the existing content
+        blogPost.innerHTML = existingContent + `<h1>${blogTitle}</h1>
+            <h2>${blogUserID}</h2>
+            <h2>${blogID}</h2>
+            <p>${blogBody}</p>`;
 
         i++;
     }
